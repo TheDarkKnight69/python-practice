@@ -8,6 +8,8 @@
   file path and a password. 
   The program provides options for file encryption, file decryption, and an interactive menu for user input.
   Screenshots:
+  
+  
     ![image](https://github.com/TheDarkKnight69/python-practice/assets/91176991/8cd273e8-1cd3-4f1c-958c-982f9e99fcc8)
 
 
@@ -17,6 +19,8 @@
   It provides various options for file manipulation, including creating a file with content, rewriting a file, adding content to an existing file, 
   deleting a file, displaying the contents of a file, and displaying the list of files in a directory.
   Screenshots:
+  
+  
     ![image](https://github.com/TheDarkKnight69/python-practice/assets/91176991/9c744693-00ea-4b54-9865-0a45fcac68f0)
 
 
