@@ -2,7 +2,7 @@
 # There are 6 different programs that I have created. You are free to use any of them for yourself.
 
 
-# Encryption Program["""](https://github.com/TheDarkKnight69/python-practice/blob/f17ff986f55150eaa2059882194a951273213521/programs/encryption.py)
+# [Encryption Program](https://github.com/TheDarkKnight69/python-practice/blob/f17ff986f55150eaa2059882194a951273213521/programs/encryption.py)
     
 This program is an Encryption/Decryption utility that allows you to encrypt and decrypt files using the pyAesCrypt library in Python.
 
@@ -27,7 +27,7 @@ Enjoy encrypting and decrypting files using this program!
 
 
 
-# File Manager
+# [File Manager](https://github.com/TheDarkKnight69/python-practice/blob/f17ff986f55150eaa2059882194a951273213521/programs/file_manager.py)
   This program is a file manager utility that allows you to perform various operations on files using the `os` library in Python.
 
 When you run the program, you will be presented with a menu of options to choose from:
@@ -63,7 +63,7 @@ Enjoy managing and manipulating files using this program!
    ![image](https://github.com/TheDarkKnight69/python-practice/assets/91176991/9c744693-00ea-4b54-9865-0a45fcac68f0)
    
   
-# Guess The Number
+# [Guess The Number](https://github.com/TheDarkKnight69/python-practice/blob/f17ff986f55150eaa2059882194a951273213521/programs/file_manager.py)
 This program is a "Guess the Number" game. The program will choose a random number between 0 and 100, and you need to guess the number. 
 It will provide hints to let you know if your guess is higher or lower than the chosen number.
 
@@ -86,7 +86,7 @@ Screenshots:
 
 
 
-# Hangman
+# [Hangman](https://github.com/TheDarkKnight69/python-practice/blob/f17ff986f55150eaa2059882194a951273213521/programs/hangman.py)
 This code is a Hangman game in Python. 
 In this game, the program selects a random word and you need to guess it by entering one letter at a time. 
 The program will provide hints for the word's subject to help you guess.
@@ -112,7 +112,7 @@ Screenshots:
 
 
 
-# Password Generator
+# [Password Generator](https://github.com/TheDarkKnight69/python-practice/blob/f17ff986f55150eaa2059882194a951273213521/programs/password_generator.py)
 
 This code is a password generator program. 
 It asks you how long you want the password to be and then creates a random password for you. 
@@ -132,7 +132,7 @@ Screenshots:
    
    
    
-# Rock - Paper - Scissors
+# [Rock - Paper - Scissors](https://github.com/TheDarkKnight69/python-practice/blob/f17ff986f55150eaa2059882194a951273213521/programs/RPS.py)
 
 This code is a Rock-Paper-Scissors game in Python. 
 It's a two-player game where you play against the computer. 
