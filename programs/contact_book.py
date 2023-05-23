@@ -1,10 +1,10 @@
-#CONTACT BOOK 
+"""CONTACT BOOK""" 
 import time
 
 CONTACT_BOOK = {}
 
-def add_contact(): 
-    # We add a contact
+def add_contact():
+    """ We add a contact"""
     while True:
         # while loop for multiple times
         print("Enter the name: ")
@@ -32,9 +32,10 @@ def add_contact():
         if confirmation != "y":   # if conf isn't "y" it breaks off.
             print("Okay. Thank you!")
             break
-
 def print_contact_book():
-    # This prints the contact book
+    """
+    This prints the contact book
+    """
     print("Contact Book:")
     for name, contact in CONTACT_BOOK.items():   # We reiterate over these in the dict
         print(f"Contact Details for {name}:")
@@ -45,23 +46,24 @@ def print_contact_book():
         print("-------------------")
 
 
+
 def delete_contact():
-    #This deletes a contact from the contact book
+    """This deletes a contact from the contact book"""
     print("Okay. Enter the name of the contact you want to delete.")
     name = input(">>> ")
     print("Scanning the contact book...... ")
     time.sleep(2)
     if name in CONTACT_BOOK['name']:
-      del CONTACT_BOOK['name']
-      print(f"Contact {name} deleted successfully!")
+        del CONTACT_BOOK['name']
+        print(f"Contact {name} deleted successfully!")
     else:
         print("Contact not found. Are you sure that was the right name?")
 
 
 def search_for_contact():
-    FloatingPointError
-        
-
+    """_summary_
+    """
+    FloatingPointError  
 CONTACT_MESSAGE = """Welcome to the Contact Book!
 Choose your action (1/2/3/4/5) from the below options:
 
@@ -75,7 +77,7 @@ Choose your action (1/2/3/4/5) from the below options:
 
 
 [* Not Implemented]
-"""  
+""" 
 print(CONTACT_MESSAGE)
 while True:
     print("-------------------")
