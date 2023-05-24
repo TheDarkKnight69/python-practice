@@ -1,5 +1,6 @@
 {
   "pylint.args": [
     "disable=W0603"
-  ]
+  ],
+  "editor.defaultFormatter": "esbenp.prettier-vscode"
 }
