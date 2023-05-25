@@ -12,9 +12,10 @@ import pyAesCrypt
 
 PASSWORD = None
 
+
 def encrypt_file():
     """
-    Encrypts a file using pyAesCrypt. 
+    Encrypts a file using pyAesCrypt.
     Takes a password and uses it or generates a random 5-character password"""
     global PASSWORD
     print("Enter the name of the file that you want to encrypt:")
@@ -29,7 +30,7 @@ def encrypt_file():
             time.sleep(1)
             output_file = file_name[:-4] + "_encrypted.txt"
             print(
-                "File/Path is valid.                                Encryption process.....[1/2]"
+                "File/Path is valid.                       Encryption Process.....[1/2]"
             )
             break
         else:
@@ -49,11 +50,13 @@ def encrypt_file():
         PASSWORD = getpass.getpass("Enter your password to encrypt: ")
 
     elif password_choice == "2":
-        PASSWORD = "".join(
-            random.choices(string.ascii_letters + string.digits, k=5))
+        PASSWORD = "".join(random.choices(
+            string.ascii_letters + string.digits, k=5))
         print("Generated password:", PASSWORD)
     time.sleep(1)
-    print("Password OK!                                       Encryption process.....[2/2]")
+    print(
+        "Password OK!                                       Encryption process.....[2/2]"
+    )
     error_message = ""
     try:
         print("File Encrypting.......")
@@ -71,10 +74,9 @@ def encrypt_file():
         print("File exists error:", str(error_message))
 
 
-
 def decrypt_file():
     """
-    Decrypts a file using pyAesCrypt. 
+    Decrypts a file using pyAesCrypt.
     Takes the set password and uses it to decrypt"""
     print("Enter the name of the file that you want to encrypt:")
     print("Enter the name of the file that you want to decrypt:")
@@ -104,13 +106,16 @@ def decrypt_file():
 
     entered_password = getpass.getpass("Please enter your password: ")
     if entered_password == PASSWORD:
-        print("Password Match!                             Decryption Process.....[2/2]")
+        print(
+            "Password Match!                       Decryption Process.....[2/2]"
+        )
         time.sleep(1)
         error_message = ""
         try:
             print("File Decrypting.......")
             time.sleep(1)
-            pyAesCrypt.decryptFile(encrypted_file, decrypted_file, entered_password)
+            pyAesCrypt.decryptFile(
+                encrypted_file, decrypted_file, entered_password)
             os.remove(encrypted_file)
             print("File decrypted successfully!")
         except FileNotFoundError as error_message:
