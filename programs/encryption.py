@@ -35,7 +35,7 @@ def encrypt_file():
             break
         else:
             print(
-                "File/Path not found. Please ensure that you have typed in the correct path."
+                "File/Path not found. Please ensure that you have typed in the correct path."  # noqa: E501
             )
             print("Enter the name of the file that you want to encrypt:")
             file_name = input(">>> ")
@@ -55,14 +55,14 @@ def encrypt_file():
         print("Generated password:", PASSWORD)
     time.sleep(1)
     print(
-        "Password OK!                                       Encryption process.....[2/2]"
+        "Password OK!                              Encryption process.....[2/2]"
     )
     error_message = ""
     try:
         print("File Encrypting.......")
         time.sleep(1)
         pyAesCrypt.encryptFile(input_file, output_file, PASSWORD)
-
+        os.remove(file_name)
         print("File encrypted successfully!")
     except FileNotFoundError as error_message:
         print("File not found:", str(error_message))
@@ -70,7 +70,7 @@ def encrypt_file():
         print("Value error:", str(error_message))
     except PermissionError as error_message:
         print("Permission error:", str(error_message))
-    except FileExistsError as error_message:
+    except FileExistsError as error_message:  # noqa: F841
         print("File exists error:", str(error_message))
 
 
@@ -78,7 +78,6 @@ def decrypt_file():
     """
     Decrypts a file using pyAesCrypt.
     Takes the set password and uses it to decrypt"""
-    print("Enter the name of the file that you want to encrypt:")
     print("Enter the name of the file that you want to decrypt:")
     encrypted_file = input(">>> ")
     time.sleep(1)
@@ -90,24 +89,24 @@ def decrypt_file():
             decrypted_file = encrypted_file[:-14] + "_decrypted.txt"
             time.sleep(1)
             print(
-                "File/Path is valid.                                   Decryption process.....[1/2]"
+                "File/Path is valid.               Decryption process.....[1/2]"
             )
             break
         else:
             time.sleep(1)
             print(
-                "File/Path not found. Please ensure that you have typed in the correct path."
+                "File/Path not found. Please ensure that you have typed in the correct path."  # noqa: E501
             )
             print("Enter the name of the file that you want to decrypt:")
             encrypted_file = input(">>> ")
             if not encrypted_file.endswith(".txt"):
                 encrypted_file += ".txt"
-                decrypted_file = encrypted_file[:-14] + "_decrypted.txt"
+                decrypted_file = encrypted_file[:-14] + ".txt"
 
     entered_password = getpass.getpass("Please enter your password: ")
     if entered_password == PASSWORD:
         print(
-            "Password Match!                       Decryption Process.....[2/2]"
+            "Password Match!                   Decryption Process.....[2/2]"
         )
         time.sleep(1)
         error_message = ""
@@ -122,13 +121,11 @@ def decrypt_file():
             print("File not found:", str(error_message))
         except ValueError as error_message:
             print("Value error:", str(error_message))
-        except PermissionError as error_message:
+        except PermissionError as error_message:  # noqa: F841
             print("Permission error:", str(error_message))
-        except FileExistsError as error_message:
-            print("File exists error:", str(error_message))
         else:
             time.sleep(1)
-            print("Password is not a match!                     Decryption Failed")
+            print("Password is not a match!                Decryption Failed")
 
 
 print("Welcome to an Encryption/Decryption Program!!")

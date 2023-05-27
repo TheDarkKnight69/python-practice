@@ -4,17 +4,18 @@ import time
 
 CONTACT_BOOK_PATH = "/workspaces/python-practice/programs/contact_book.json"
 
-def to_camel_case(field):
 
-    """ _summary_
+def to_camel_case(field):
+    """_summary_
 
     _extended_summary_
 
     Returns:
-        _type_: _description_
+            _type_: _description_
     """
-    words = field.split(' ')
-    return words[0] + ''.join(word.title() for word in words[1:])
+    words = field.split(" ")
+    return words[0] + "".join(word.title() for word in words[1:])
+
 
 def load_contact_book():
     """load_contact_book _summary_
@@ -22,7 +23,7 @@ def load_contact_book():
     _extended_summary_
 
     Returns:
-        _type_: _description_
+            _type_: _description_
     """
     try:
         with open(CONTACT_BOOK_PATH, "r", encoding="utf-8") as file:  # noqa: E501
@@ -36,10 +37,14 @@ def load_contact_book():
 
 CONTACT_BOOK = load_contact_book()
 
+
 def add_contact():
     """Add a contact to the CONTACT_BOOK"""
     while True:
         print("Enter the name: ")
+        age = 0
+        phone_number = 0
+
         name = input(">>> ")
         if name not in CONTACT_BOOK:
             print("Enter the age: ")
@@ -49,7 +54,7 @@ def add_contact():
             CONTACT_BOOK[name] = {
                 "name": name,
                 "age": age,
-                "phone_number": phone_number
+                "phone_number": phone_number,
             }
             print("Do you want to add another field?:  (Y/N)")
             field_confirmation = input(">>> ").lower()
@@ -63,7 +68,6 @@ def add_contact():
                     print(f"Enter the value for the field '{field}': ")
                     field_value = input(">>> ")
                     CONTACT_BOOK[name][field] = field_value
-
 
         # Check if the contact name already exists
         else:
@@ -82,12 +86,12 @@ def add_contact():
         print(f"Phone Number: {phone_number}")
 
         for field, value in CONTACT_BOOK[name].items():
-            if field not in ['name', 'age', 'phone_number']:
+            if field not in ["name", "age", "phone_number"]:
                 field_name = to_camel_case(field)
                 print(f"{field_name}: {value}")
                 break
 
-       # Printing it because fancy
+        # Printing it because fancy
         print("Do you want to add another contact? (Y/N)")  # Asks for another contact
         confirmation = input(">>> ").lower()
         if confirmation != "y":  # if conf isn't "y" it breaks off.
@@ -105,13 +109,11 @@ def print_contact_book():
         print(f"Name: {contact['name']}")
         print(f"Age: {contact['age']}")
         print(f"Phone Number: {contact['phone_number']}")
-        for field,value in contact.items():
-            if field not in ['name', 'age','phone_number']:
+        for field, value in contact.items():
+            if field not in ["name", "age", "phone_number"]:
                 field_name = to_camel_case(field)
                 print(f"{field_name}: {value}")
                 print("-------------------")
-
-
 
 
 def delete_contact():
@@ -140,6 +142,11 @@ def search_for_contact():
         print(f"Name: {contact['name']}")
         print(f"Age: {contact['age']}")
         print(f"Phone Number: {contact['phone_number']}")
+        for field, value in contact.items():
+            if field not in ["name", "age", "phone_number"]:
+                field_name = to_camel_case(field)
+                print(f"{field_name}: {value}")
+
     else:
         print("No matches found..... Please doublecheck the name.")
 

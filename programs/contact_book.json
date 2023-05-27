@@ -1,1 +1,7 @@
-{"John": {"name": "John", "age": "19", "phone_number": 987172135}, "Harry": {"name": "Harry", "age": "19", "phone_number": 9182371562}, "Sarah": {"name": "Sarah", "age": "22", "phone_number": 918273651}, "Bob": {"name": "Bob", "age": "19", "phone_number": 8127364123}, "Kristy": {"name": "Kristy", "age": "12", "phone_number": 88217347235}}
+{
+	"John": { "name": "John", "age": "19", "phone_number": 987172135 },
+	"Harry": { "name": "Harry", "age": "19", "phone_number": 9182371562 },
+	"Sarah": { "name": "Sarah", "age": "22", "phone_number": 918273651 },
+	"Bob": { "name": "Bob", "age": "19", "phone_number": 8127364123 },
+	"Kristy": { "name": "Kristy", "age": "12", "phone_number": 88217347235 }
+}
