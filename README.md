@@ -1,5 +1,5 @@
 # Welcome to my Python Program Dump!
-# There are 6 different programs that I have created. You are free to use any of them for yourself.
+# There are 6 different programs that I have created.
 
 
 # [Encryption Program](https://github.com/TheDarkKnight69/python-practice/blob/f17ff986f55150eaa2059882194a951273213521/programs/encryption.py)
