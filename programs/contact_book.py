@@ -112,7 +112,7 @@ def print_contact_book():
         for field, value in contact.items():
             if field not in ["name", "age", "phone_number"]:
                 field_name = to_camel_case(field)
-                print(f"{field_name}: {value}")
+                print(f"{field_name.capitalize()}: {value}")
                 print("-------------------")
 
 
