@@ -1,9 +1,17 @@
-print("Enter 3 numbers")
-a, b, c = int(input(">>>")), int(input(">>>")), int(input(">>>"))
-set1 = {a, b, c}
-if a > b and a > c:
-    print(f"{a} is the largest number in the set {set1}")
-elif b > c and b > a:
-    print(f"{b} is the largest number in the set {set1}")
-else:
-    print(f"{c} is the largest number in the set {set1}")
+import random
+import string
+import requests
+
+
+key = "".join(random.choices(string.ascii_letters + string.digits, k=30))
+weather_api = requests.get(
+    f"http://api.weatherapi.com/v1/current.json?key={key}&q=auto:ip"
+)
+while True:
+    if weather_api.status_code == 200:
+        print(key)
+    else:
+        key = "".join(random.choices(string.ascii_letters + string.digits, k=30))
+        weather_api = requests.get(
+            f"http://api.weatherapi.com/v1/current.json?key={key}&q=auto:ip"
+        )
